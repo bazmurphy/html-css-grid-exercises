@@ -1,9 +1,9 @@
 main {
   /* Turn on the grid.*/
-  /* display: grid; */
+  display: grid;
 
   /* Set the gap between the cells to 2em */
-  gap: ;
+  gap: 2em;
   
   grid-template-areas:
     "aside header"
@@ -15,14 +15,18 @@ main h2 {
   background: pink;
   margin: 0;
 }
+
 main section {
   /* Assign this element to the named area 'aside' */
-  grid-area: section;
+  /* grid-area: section; */
+  grid-area: aside;
   background: grey;
 }
+
 main aside {
   /* Assign this element to the named area 'section' */
-  grid-area: aside;
+  /* grid-area: aside; */
+  grid-area: section;
   background: pink;
 }
 
@@ -30,12 +34,15 @@ main aside {
 body {
   font: 120% Monaco, monospace;
 }
+
 body > * {
   padding: 1em;
 }
+
 header {
   text-align: center;
 }
+
 main > * {
   padding: 1em;
 }
@@ -44,6 +51,7 @@ footer ul {
   display: flex;
   justify-content: center;
 }
+
 footer li {
   list-style: none;
   padding: 1em;
