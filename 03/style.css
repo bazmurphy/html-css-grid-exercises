@@ -21,7 +21,8 @@ main section {
   grid-area: section;
   background: lightblue;
   display: grid;
-  gap: 15px 20px;
+  /* gap: 15px 20px; */
+  gap: var(--spacing);
   /* Combine named areas and grid templates (row and column) to perfectly size your layouts. 
   Here the dots represent empty cells, used like padding.  */
 
@@ -30,8 +31,10 @@ main section {
     ". icon heading ."
     ". copy copy    ."
     ". .    .       .";
-  grid-template-columns: 20px auto 1fr 20px;
-  grid-template-rows: 20px auto 1fr 20px;
+  /* grid-template-columns: 20px auto 1fr 20px; */
+  /* grid-template-rows: 20px auto 1fr 20px; */
+  grid-template-columns: var(--spacing) auto 1fr var(--spacing);
+  grid-template-rows: var(--spacing) auto 1fr var(--spacing);
 
   /* TASK ONE (there is only one task)
   Size the spacing in the grid template with a CSS variable.
