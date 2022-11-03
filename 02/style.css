@@ -17,7 +17,7 @@ main section {
   /* you can grid inside a grid 
   TASK ONE
   Turn on the grid and go to TASK TWO */
-/*   display: grid; */
+  display: grid;
   gap: 5px 15px;
   grid-template-columns: 50px 1fr 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -26,22 +26,31 @@ main section {
 section * {
   grid-column: 2/4;
   background: white;
-  /* you can still use margin and padding if you like, but a bit like flexbox, some interesting things happen.*/
+  /* you can still use margin and padding if you like, 
+  but a bit like flexbox, some interesting things happen.*/
   padding: 20px;
   /*TASK TWO 
-   tip! margin rules go around the clock so:
-   margin: top right bottom left;
-  These blocks are pinned to the top right. Change the margin rules to "pin" the grid cell to the bottom left. Now try pinning to all the sides, and none. Now remove the margin rules completely and move to TASK THREE. */
- margin: 0 0 auto auto;
+  tip! margin rules go around the clock so:
+  margin: top right bottom left;
+  These blocks are pinned to the top right. 
+  Change the margin rules to "pin" the grid cell to the bottom left. 
+  Now try pinning to all the sides, and none. 
+  Now remove the margin rules completely and move to TASK THREE. */
+  /* margin: 0 0 auto auto; */
+  /* margin: auto auto 0 0; */
+  /* margin: 0 0 0 0; */
+  /* margin: auto auto auto auto; */
+  margin: none;
 }
 
 section .emoji {
   /* TASK THREE
-  Here the info icon is placed in the first grid cell. Change the placement so it takes up the whole top row. */
-  grid-column: 1 / span 1;
-  grid-row: 1/ span 1;
- 
+  Here the info icon is placed in the first grid cell. 
+  Change the placement so it takes up the whole top row. */
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
 }
+
 main aside {
   grid-area: aside;
   background: pink;
