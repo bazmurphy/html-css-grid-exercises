@@ -1,0 +1,50 @@
+main {
+  /* Turn on the grid.*/
+  /* display: grid; */
+
+  /* Set the gap between the cells to 2em */
+  gap: ;
+  
+  grid-template-areas:
+    "aside header"
+    "aside section";
+}
+
+main h2 {
+  grid-area: header;
+  background: pink;
+  margin: 0;
+}
+main section {
+  /* Assign this element to the named area 'aside' */
+  grid-area: section;
+  background: grey;
+}
+main aside {
+  /* Assign this element to the named area 'section' */
+  grid-area: aside;
+  background: pink;
+}
+
+/* no more grid rules, go to Grid #2*/
+body {
+  font: 120% Monaco, monospace;
+}
+body > * {
+  padding: 1em;
+}
+header {
+  text-align: center;
+}
+main > * {
+  padding: 1em;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+footer li {
+  list-style: none;
+  padding: 1em;
+}

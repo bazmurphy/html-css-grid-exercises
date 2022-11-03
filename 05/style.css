@@ -1,0 +1,89 @@
+body {
+  display: grid;
+  place-items: center;
+}
+
+.puzzle {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 200px);
+  gap: 5px;
+}
+
+.tile {
+  text-align: center;
+}
+
+/* GRID TILE PUZZLE 
+ Sort the tiles by placing each tile with css grid.
+ Place a tile in a row and a column.
+ Use Devtools to find out what row and column numbers to set.
+*/
+
+.tile:nth-child(1) {
+
+}
+
+.tile:nth-child(2) {
+
+}
+
+.tile:nth-child(3) {
+
+}
+
+
+/* do not edit beyond this line */
+
+header {
+  text-align: center;
+}
+
+body {
+  font: 120% Monaco, monospace;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  list-style: none;
+  padding: 1em;
+}
+
+.tile:nth-child(1) {
+  background: green;
+}
+
+.tile:nth-child(2) {
+  background: blue;
+}
+
+.tile:nth-child(3) {
+  background: red;
+}
+
+.tile:nth-child(4) {
+  background: blue;
+}
+.tile:nth-child(5) {
+  background: red;
+}
+
+.tile:nth-child(6) {
+  background: green;
+}
+
+.tile:nth-child(7) {
+  background: green;
+}
+
+.tile:nth-child(8) {
+  background: blue;
+}
+
+.tile:nth-child(9) {
+  background: red;
+}

@@ -1,0 +1,92 @@
+/* Hmmm what could this be? Is it a custom variable? */
+:root {
+  --spacing: clamp(15px, calc(10px + 2vw), 30px);
+}
+
+main {
+  display: grid;
+  gap: var(--spacing);
+  grid-template-areas:
+    "header aside"
+    "section aside";
+}
+
+main h2 {
+  grid-area: header;
+  background: pink;
+  margin: 0;
+}
+
+main section {
+  grid-area: section;
+  background: lightblue;
+  display: grid;
+  gap: 15px 20px;
+  /* Combine named areas and grid templates (row and column) to perfectly size your layouts. 
+  Here the dots represent empty cells, used like padding.  */
+
+  grid-template-areas:
+    ". .    .       ."
+    ". icon heading ."
+    ". copy copy    ."
+    ". .    .       .";
+  grid-template-columns: 20px auto 1fr 20px;
+  grid-template-rows: 20px auto 1fr 20px;
+
+  /* TASK ONE (there is only one task)
+  Size the spacing in the grid template with a CSS variable.
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+  
+  Will you size the gap, the empty cells, or both?
+  Hint: there's a spacing variable at the top of this CSS.
+  Look in Devtools and resize the page.
+  Try looking with Firefox Developer Edition.
+  https://www.mozilla.org/en-GB/firefox/developer/
+  What is happening? Report back with your findings.
+  */
+}
+
+section .title {
+  grid-area: heading;
+}
+
+section .copy {
+  grid-area: copy;
+}
+
+section .emoji {
+  grid-area: icon;
+  margin: auto;
+}
+
+main aside {
+  grid-area: aside;
+  background: pink;
+}
+
+/* no more grid rules, go to Grid #4*/
+body {
+  font: 120% Monaco, monospace;
+}
+
+body > * {
+  padding: 1em;
+}
+
+header {
+  text-align: center;
+}
+
+main > * {
+  padding: 1em;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  list-style: none;
+  padding: 1em;
+}

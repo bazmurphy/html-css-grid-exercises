@@ -1,0 +1,72 @@
+main {
+ display: grid;
+ gap: 20px 40px;
+ grid-template-areas:
+    "aside header"
+    "aside section ";
+}
+
+main h2 {
+  grid-area: header;
+  background: pink;
+  margin: 0;
+}
+main section {
+  grid-area: section;
+  background: lightblue;
+  /* you can grid inside a grid 
+  TASK ONE
+  Turn on the grid and go to TASK TWO */
+/*   display: grid; */
+  gap: 5px 15px;
+  grid-template-columns: 50px 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+section * {
+  grid-column: 2/4;
+  background: white;
+  /* you can still use margin and padding if you like, but a bit like flexbox, some interesting things happen.*/
+  padding: 20px;
+  /*TASK TWO 
+   tip! margin rules go around the clock so:
+   margin: top right bottom left;
+  These blocks are pinned to the top right. Change the margin rules to "pin" the grid cell to the bottom left. Now try pinning to all the sides, and none. Now remove the margin rules completely and move to TASK THREE. */
+ margin: 0 0 auto auto;
+}
+
+section .emoji {
+  /* TASK THREE
+  Here the info icon is placed in the first grid cell. Change the placement so it takes up the whole top row. */
+  grid-column: 1 / span 1;
+  grid-row: 1/ span 1;
+ 
+}
+main aside {
+  grid-area: aside;
+  background: pink;
+}
+
+
+/* no more grid rules, go to Grid #3*/
+body {
+  font: 120% Monaco, monospace;
+}
+body > * {
+  padding: 1em;
+}
+header {
+  text-align: center;
+}
+main > * {
+  padding: 1em;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+footer li {
+  list-style: none;
+  padding: 1em;
+}

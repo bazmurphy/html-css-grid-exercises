@@ -1,0 +1,37 @@
+/*=======================================/*
+* GRID 4, write your own grids for main and section
+/*=======================================*/
+
+
+
+
+
+
+
+
+/* no more grid rules*/
+body {
+  font: 120% Monaco, monospace;
+}
+
+body > * {
+  padding: 1em;
+}
+
+header {
+  text-align: center;
+}
+
+main > * {
+  padding: 1em;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  list-style: none;
+  padding: 1em;
+}
